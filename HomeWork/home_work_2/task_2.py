@@ -3,25 +3,13 @@
 # пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 
 number = int(input('Введите число: '))
-array = list(range(1, number+1))
-print(array)
+array = []
 count = 0
 start_element = 1
-while count < len(array):
-    start_element *= array[(start_index+1)]
+next_element = 2
+while count < number:
+    array.append(start_element)
+    start_element = start_element * next_element
     count += 1
-    print(array)
+    next_element += 1
 print(array)
-
-
-# number = int(input('Введите число: '))
-# count = 0
-# array = []
-# startNum = 1
-# nextNum=2
-# while count < number:
-#     array.append(startNum) 
-#     startNum = startNum*nextNum
-#     count += 1
-#     nextNum += 1
-# print (array)
